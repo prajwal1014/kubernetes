@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flipkart
+spec:
+  containers:
+    - name: signup
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo signup; sleep 2; done"]
+    - name: login
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo login; sleep 2; done"]
