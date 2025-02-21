@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: deployment
+  template:
+    metadata:
+      name: signup
+      labels:
+        name: deployment
+    spec:
+      containers:
+        - name: v2
+          image: centos
+          command: ["/bin/bash", "-c", "while true; do echo v1.2; sleep 2; done"]
